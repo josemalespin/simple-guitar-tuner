@@ -17,27 +17,29 @@ class TunerMarker extends StatelessWidget {
       height: 130,
       child: Stack(
         children: [
-          AnimatedPositioned(
-              curve: Curves.ease,
-              duration: const Duration(milliseconds: 500),
-              left: tunerController.markerPositionX.value - (48 / 2),
-              top: 50.0,
-              child: Column(
-                children: [
-                  Icon(
-                    Icons.location_on,
-                    color: tunerController.isTuned.value
-                        ? Colors.green
-                        : Colors.grey,
-                    size: 48.0,
-                    semanticLabel: 'Afinador de guitarra',
-                  ),
-                  Text(
-                    tunerController.currentPitch.value.toStringAsFixed(2),
-                    style: styleWhiteSmall,
-                  )
-                ],
-              )),
+          Obx(
+            () => AnimatedPositioned(
+                curve: Curves.ease,
+                duration: const Duration(milliseconds: 500),
+                left: tunerController.markerPositionX.value - (48 / 2),
+                top: 50.0,
+                child: Column(
+                  children: [
+                    Icon(
+                      Icons.location_on,
+                      color: tunerController.isTuned.value
+                          ? Colors.green
+                          : Colors.grey,
+                      size: 48.0,
+                      semanticLabel: 'Afinador de guitarra',
+                    ),
+                    Text(
+                      tunerController.currentPitch.value.toStringAsFixed(2),
+                      style: styleWhiteSmall,
+                    )
+                  ],
+                )),
+          ),
         ],
       ),
     );
