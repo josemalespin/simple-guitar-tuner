@@ -16,3 +16,5 @@ if the string is tuned.
   If the launcher icon is changed
 - flutter pub run flutter_native_splash:create 
   To update splash screen
+
+## Made in May 2024
