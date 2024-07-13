@@ -20,7 +20,7 @@ class TunerMarker extends StatelessWidget {
           Obx(
             () => AnimatedPositioned(
                 curve: Curves.ease,
-                duration: const Duration(milliseconds: 500),
+                duration: const Duration(milliseconds: 300),
                 left: tunerController.markerPositionX.value - (48 / 2),
                 top: 50.0,
                 child: Column(
